@@ -38,7 +38,8 @@ let s:mappings = {
    \ 'FirstLineInHistory':       ['<M-<>', '<C-F>gg<C-C>'],
    \ 'LastLineInHistory':        ['<M->>', '<C-F>Gk<C-C>'],
    \ 'SearchCommandLine':        ['<C-R>', '<C-F>?'],
-   \ 'AbortCommand':             ['<C-G>', '<C-C>']
+   \ 'AbortCommand':             ['<C-G>', '<C-C>'],
+   \ 'DeleteWholeLine':          ['<C-U>', '<C-E><C-U>']
    \ }
 if !has('gui_running') && !has('nvim')
     let s:mappings['FirstLineInHistory'][0] = '<Esc><'
@@ -359,11 +360,9 @@ let s:functions = {
   \ 'DeleteChar':                  ['<Del>', '<C-D>'],
   \ 'BackwardDeleteChar':          ['<BS>', '<C-H>'],
   \ 'KillLine':                    '<C-K>',
-  \ 'BackwardKillLine':            '<C-U>',
   \ 'KillWord':                    '<M-d>',
-  \ 'DeleteBackwardsToWhiteSpace': '<C-W>',
-  \ 'BackwardKillWord':            '<M-BS>',
-  \ 'TransposeChar':               '<C-T>',
+  \ 'DeleteBackwardsToWhiteSpace': '<M-BS>',
+  \ 'BackwardKillWord':            '<C-W>',
   \ 'TransposeWord':               '<M-t>',
   \ 'Yank':                        '<C-Y>',
   \ 'Undo':                        ['<C-_>', '<C-X><C-U>'],
